@@ -1,13 +1,9 @@
 #!/bin/sh
 
 # Variable setting
-eval "$(/opt/homebrew/bin/brew shellenv)"
-export PATH=$PATH:/usr/local/platform-tools
+
 export EDITOR='nvim'
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
-
-export http_proxy=socks5://127.0.0.1:1080
-export https_proxy=socks5://127.0.0.1:1080
 
 
 export ZSH=$HOME/.config/zsh
@@ -17,8 +13,8 @@ source "$ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$ZSH/plugins/zsh-autopair/autopair.zsh"
 source "$ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan"
-source "/opt/homebrew/opt/fzf/shell/completion.zsh"
-source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
+source "$ZSH/plugins/fzf/completion.zsh"
+source "$ZSH/plugins/fzf/key-bindings.zsh"
 export FZF_DEFAULT_OPTS="--height=60% --layout=reverse --info=inline "
 export FZF_COMPLETION_TRIGGER='\'
 
@@ -34,13 +30,10 @@ alias ra="ranger"
 alias vim="nvim"
 alias lg='lazygit'
 alias la="ls -la"
-alias id="cd ~/Documents/"
-alias ic="cd ~/.config/"
+alias id="cd ~/Documents"
+alias ic="cd ~/.config"
 alias il="cd ~/.local/share/"
 alias bk="cd .."
-alias ir="cd ~/Documents/research-test/"
-alias in="cd ~/Documents/note/"
-
 # Colorized man
 man() {
 	LESS_TERMCAP_md=$'\e[01;31m' \
