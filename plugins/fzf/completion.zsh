@@ -275,7 +275,7 @@ fzf-completion() {
   cmd=$(__fzf_extract_command "$LBUFFER")
 
   # Explicitly allow for empty trigger.
-  trigger=${FZF_COMPLETION_TRIGGER-'**'}
+  trigger=${FZF_COMPLETION_TRIGGER-'\'}
   [ -z "$trigger" -a ${LBUFFER[-1]} = ' ' ] && tokens+=("")
 
   # When the trigger starts with ';', it becomes a separate token

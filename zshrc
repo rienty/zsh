@@ -16,11 +16,8 @@ export ZSH=$HOME/.config/zsh
 source "$ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$ZSH/plugins/zsh-autopair/autopair.zsh"
 source "$ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan"
-source "/opt/homebrew/opt/fzf/shell/completion.zsh"
-source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
-export FZF_DEFAULT_OPTS="--height=60% --layout=reverse --info=inline "
-export FZF_COMPLETION_TRIGGER='\'
+source "$ZSH/plugins/fzf/completion.zsh"
+source "$ZSH/plugins/fzf/key-bindings.zsh"
 
 # Load theme
 source "$ZSH/themes/git.zsh"
