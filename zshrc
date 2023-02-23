@@ -2,7 +2,7 @@
 
 # Variable setting
 eval "$(/opt/homebrew/bin/brew shellenv)"
-
+export PATH=$PATH:/usr/local/platform-tools
 export EDITOR='nvim'
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 
@@ -34,10 +34,13 @@ alias ra="ranger"
 alias vim="nvim"
 alias lg='lazygit'
 alias la="ls -la"
-alias id="cd ~/Documents"
-alias ic="cd ~/.config"
+alias id="cd ~/Documents/"
+alias ic="cd ~/.config/"
 alias il="cd ~/.local/share/"
 alias bk="cd .."
+alias ir="cd ~/Documents/research-test/"
+alias in="cd ~/Documents/note/"
+
 # Colorized man
 man() {
 	LESS_TERMCAP_md=$'\e[01;31m' \
