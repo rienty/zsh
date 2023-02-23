@@ -37,7 +37,7 @@ alias la="ls -la"
 alias id="cd ~/Documents"
 alias ic="cd ~/.config"
 alias il="cd ~/.local/share/"
-
+alias bk="cd .."
 # Colorized man
 man() {
 	LESS_TERMCAP_md=$'\e[01;31m' \
