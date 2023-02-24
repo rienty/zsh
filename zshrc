@@ -1,30 +1,24 @@
 #!/bin/sh
-
 # Variable setting
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH=$PATH:/usr/local/platform-tools
+
 export EDITOR='nvim'
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
-
 export http_proxy=socks5://127.0.0.1:1080
 export https_proxy=socks5://127.0.0.1:1080
 
-
+## My zsh configuration
 export ZSH=$HOME/.config/zsh
-
 # Load plugins
 source "$ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$ZSH/plugins/zsh-autopair/autopair.zsh"
 source "$ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$ZSH/plugins/fzf/completion.zsh"
 source "$ZSH/plugins/fzf/key-bindings.zsh"
-
 # Load theme
 source "$ZSH/themes/git.zsh"
 source "$ZSH/themes/ren.zsh"
-
-#PROMPT='
-# %~%b $ '
 
 # Alias
 alias ra="ranger"
@@ -37,18 +31,6 @@ alias il="cd ~/.local/share/"
 alias bk="cd .."
 alias ir="cd ~/Documents/research-test/"
 alias in="cd ~/Documents/note/"
-
-# Colorized man
-man() {
-	LESS_TERMCAP_md=$'\e[01;31m' \
-		LESS_TERMCAP_me=$'\e[0m' \
-		LESS_TERMCAP_se=$'\e[0m' \
-		LESS_TERMCAP_so=$'\e[01;44;33m' \
-		LESS_TERMCAP_ue=$'\e[0m' \
-		LESS_TERMCAP_us=$'\e[01;32m' \
-		command man "$@"
-	}
-
 
 # Keybinding
 bindkey '^F' vi-forward-char
