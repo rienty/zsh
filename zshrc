@@ -5,6 +5,7 @@ export PATH=$PATH:/usr/local/platform-tools
 
 export EDITOR='nvim'
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+
 export http_proxy=socks5://127.0.0.1:1080
 export https_proxy=socks5://127.0.0.1:1080
 
@@ -25,12 +26,12 @@ alias ra="ranger"
 alias vim="nvim"
 alias lg='lazygit'
 alias la="ls -la"
-alias id="cd ~/Documents/"
-alias ic="cd ~/.config/"
-alias il="cd ~/.local/share/"
 alias bk="cd .."
-alias ir="cd ~/Documents/research-test/"
-alias in="cd ~/Documents/note/"
+alias ic="cd ~/.config/nvim/"
+alias il="cd ~/.local/share/nvim/site/pack/plugins/start/"
+alias iz="cd ~/.config/zsh/"
+alias id="cd ~/Documents/"
+alias iw="cd ~/Documents/work/"
 
 # Keybinding
 bindkey '^F' vi-forward-char
