@@ -1,7 +1,7 @@
 #!/bin/sh
 # Variable setting
 eval "$(/opt/homebrew/bin/brew shellenv)"
-export PATH=$PATH:/usr/local/platform-tools
+export PATH=$PATH:/usr/local/platform-tools:$HOME/neovim-local/bin
 
 export EDITOR='nvim'
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
