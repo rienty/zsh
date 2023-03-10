@@ -37,4 +37,4 @@ ys_hg_prompt_info() {
 }
 
 PROMPT="
-%{$fg[black]$bg[cyan]%}  %{$reset_color%}%{$fg[white]$bg[cyan]%} %~ %{$reset_color%}%{$fg[cyan]%}%{$reset_color%}${hg_info}${git_info} %{$fg[blue]%}  %{$reset_color%}"
+%{$fg[black]$bg[cyan]%}  %{$reset_color%}%{$fg[black]$bg[cyan]%} %~ %{$reset_color%}%{$fg[cyan]%}%{$reset_color%}${hg_info}${git_info} %{$fg[blue]%}  %{$reset_color%}"
